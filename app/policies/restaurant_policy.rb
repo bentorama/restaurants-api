@@ -18,4 +18,8 @@ class RestaurantPolicy < ApplicationPolicy
     # any logged in user can create a restuarant
     !user.nil?
   end
+
+  def destroy?
+    update?
+  end
 end
